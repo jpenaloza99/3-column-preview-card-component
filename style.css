@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+:root {
+  --clr-bright-orange: hsl(31, 77%, 52%);
+  --clr-dark-cyan: hsl(184, 100%, 22%);
+  --clr-very-dark-cyan: hsl(179, 100%, 13%);
+  --clr-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --clr-very-light-gray: hsl(0, 0%, 95%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  background: var(--clr-very-light-gray);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 30px;
+}
+.card {
+  padding: 40px 40px;
+}
+.card-title {
+  margin: 15px 0;
+  color: var(--clr-very-light-gray);
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 2rem;
+}
+
+.card-info {
+  margin: 20px 30px 20px 0px;
+  color: var(--clr-very-light-gray);
+}
+.btn {
+  border: none;
+  background: var(--clr-very-light-gray);
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-family: inherit;
+}
+
+.btn:hover {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.btn-orange {
+  color: var(--clr-bright-orange);
+}
+.btn-light-blue {
+  color: var(--clr-dark-cyan);
+}
+.btn-dark-blue {
+  color: var(--clr-very-dark-cyan);
+}
+.card-1 {
+  background: var(--clr-bright-orange);
+  border-radius: 10px 10px 0 0;
+}
+.card-2 {
+  background: var(--clr-dark-cyan);
+}
+.card-3 {
+  background: var(--clr-very-dark-cyan);
+  border-radius: 0 0 10px 10px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 992px) {
+  .cards {
+    height: calc(100vh - 1px);
+    flex-direction: row;
+    max-width: 950px;
+    margin: auto;
+  }
+
+  .card-1 {
+    border-top-right-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .card-3 {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+  }
+
+  .btn {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .cards {
+    max-width: 1200px;
+  }
+}
